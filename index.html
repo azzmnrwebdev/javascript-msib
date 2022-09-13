@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,6 +24,10 @@
         body {
             background-color: #0f172a;
             font-family: 'Inter', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         table * {
@@ -30,15 +35,16 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
-        <h2 class="text-light mt-5 text-center">Data Pegawai 1 s/d 100</h2>
+        <h3 class="text-light mb-5 text-center">Data Pegawai 1 s/d 100</h3>
 
-        <div class="table-responsive my-5">
-            <table class="table table-bordered table-striped">
+        <div class="table-responsive bg-danger" style="height: 400px;border-radius: 10px;">
+            <table class="table table-bordered m-0">
                 <thead bgcolor="salmon">
                     <tr>
-                        <th>No</th>
+                        <th class="text-center">No</th>
                         <th>Name</th>
                         <th>Position</th>
                         <th>Religion</th>
@@ -72,11 +78,21 @@
 
                             // menggunakan switch case untuk menentukan gapok
                             switch (jabatan) {
-                                case "Staff": gapok = 4000000; break;
-                                case "Super Visor": gapok = 7000000; break;
-                                case "Asisten Manager": gapok = 10000000; break;
-                                case "Manager": gapok = 15000000; break;
-                                default: gapok = 15000000; break;
+                                case "Staff":
+                                    gapok = 4000000;
+                                    break;
+                                case "Super Visor":
+                                    gapok = 7000000;
+                                    break;
+                                case "Asisten Manager":
+                                    gapok = 10000000;
+                                    break;
+                                case "Manager":
+                                    gapok = 15000000;
+                                    break;
+                                default:
+                                    gapok = 15000000;
+                                    break;
                             }
 
                             // logic perhitungan tunjab, tunkes, gator dan menentukan agama sesuai bil ganjil dan genap serta bgcolor nya
@@ -124,4 +140,5 @@
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
     </script>
 </body>
+
 </html>
