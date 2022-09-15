@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Pegawai 1 s/d 100 - Muhammad Azzam Nur Alwi Mansyur</title>
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!-- css custom -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        body {
+            background-color: #0f172a;
+            font-family: 'Inter', sans-serif;
+        }
+
+        table * {
+            white-space: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="text-light mt-5 text-center">Data Pegawai 1 s/d 100</h2>
+
+        <div class="table-responsive my-5">
+            <table class="table table-bordered table-striped">
+                <thead bgcolor="salmon">
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>Nilai</th>
+                        <th>Keterangan</th>
+                        <th>Grade</th>
+                        <th>Predikat</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <script>
+                        const mahasiswas = [
+                            {nama:"Budi", nilai:75},
+                            {nama:"Bedu", nilai:55},
+                            {nama:"Dedi", nilai:95},
+                            {nama:"Dudi", nilai:88},
+                            {nama:"Deden", nilai:25},
+                            {nama:"Desi", nilai:65}
+                        ]
+
+                        for (var value of mahasiswas) {
+                            console.log(value)
+                        }
+                    </script>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
