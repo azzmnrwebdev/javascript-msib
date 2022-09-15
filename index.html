@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Pegawai 1 s/d 100 - Muhammad Azzam Nur Alwi Mansyur</title>
+    <title>Data Nilai Mahasiswa - Muhammad Azzam Nur Alwi Mansyur</title>
 
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -19,11 +19,15 @@
 
     <!-- css custom -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
         body {
             background-color: #0f172a;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Quicksand', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         table * {
@@ -33,11 +37,11 @@
 </head>
 
 <body>
-    <div class="container">
-        <h2 class="text-light mt-5 text-center">Data Pegawai 1 s/d 100</h2>
+    <div class="container col-lg-8 col-xl-6">
+        <h3 class="text-light mb-5 text-center">Data Nilai Mahasiswa</h3>
 
-        <div class="table-responsive my-5">
-            <table class="table table-bordered table-striped">
+        <div class="overflow-auto" style="border-radius: 10px;">
+            <table class="table table-bordered text-center m-0">
                 <thead bgcolor="salmon">
                     <tr>
                         <th>No</th>
@@ -50,18 +54,56 @@
                 </thead>
 
                 <tbody>
-                    <script>
+                    <script language="javaScript">
+                        let number = 1;
                         const mahasiswas = [
-                            {nama:"Budi", nilai:75},
-                            {nama:"Bedu", nilai:55},
-                            {nama:"Dedi", nilai:95},
-                            {nama:"Dudi", nilai:88},
-                            {nama:"Deden", nilai:25},
-                            {nama:"Desi", nilai:65}
+                            {nama: "Budi", nilai: 75},
+                            {nama: "Bedu", nilai: 55},
+                            {nama: "Dedi", nilai: 95},
+                            {nama: "Dudi", nilai: 88},
+                            {nama: "Deden", nilai: 25},
+                            {nama: "Desi", nilai: 65},
                         ]
 
-                        for (var value of mahasiswas) {
-                            console.log(value)
+                        // looping for of data mahasiswas
+                        for (let mhs of mahasiswas) {
+                            let nama = mhs.nama;
+                            let nilai = mhs.nilai;
+                            let grade = "";
+
+                            // if multi kondisi menentukan grade sesuai nilai
+                            if (nilai >= 85 && nilai <= 100) grade = "A";
+                            else if (nilai >= 75 && nilai <= 85) grade = "B";
+                            else if (nilai >= 60 && nilai <= 75) grade = "C";
+                            else if (nilai >= 45 && nilai <= 60) grade = "D";
+                            else grade = "E";
+
+                            // menentukan predikat menggunakan conditional switch case
+                            let predikat = "";
+                            switch (grade) {
+                                case "A": predikat = "Memuaskan"; break;
+                                case "B": predikat = "Bagus"; break;
+                                case "C": predikat = "Cukup"; break;
+                                case "D": predikat = "Kurang"; break;
+                                case "E": predikat = "Buruk"; break;
+                                default: predikat = "Maaf anda tidak ada predikat"; break;
+                            }
+
+                            // menentukan keterangan dan background warna sesuai baris ganjil genap
+                            const keterangan = nilai >= 60 ? "Lulus" : "Gagal";
+                            const warna = number % 2 == 1 ? "#fde047" : "#67e8f9";
+
+                            // cetak tag html dari js
+                            document.write(`
+                                <tr bgcolor=${warna}>
+                                    <td>${number++}</td>
+                                    <td>${nama}</td>
+                                    <td>${nilai}</td>
+                                    <td>${keterangan}</td>
+                                    <td>${grade}</td>
+                                    <td>${predikat}</td>
+                                </tr>
+                            `)
                         }
                     </script>
                 </tbody>
