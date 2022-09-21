@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Konversi Kurs - Tugas 4 Javascript | Muhammad Azzam Nur Alwi Mansyur</title>
+
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+        <link rel="manifest" href="assets/favicon/site.webmanifest">
+
+        <!-- bootstrap css -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        
+        <!-- style css -->
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+            body {
+                font-family: 'Quicksand', sans-serif;
+            }
+
+            .card {
+                background-color: #6ee7b7;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container my-5">
+            <div class="text-center text-primary">
+                <h3>Pembelian Barang dengan Konversi Kurs</h3>
+            </div>
+
+            <hr />
+            <form id="formKonversi" class="row g-3 mt-3">
+                <div class="col-md-6 col-12">
+                    <label for="namaPembeli" class="form-label">Nama Pembeli <span class="text-danger fw-semibold">*</span></label>
+                    <input type="text" class="form-control" id="namaPembeli" name="namaPembeli"  maxlength="45" />
+                </div>
+                <div class="col-md-6 col-12">
+                    <label for="namaBarang" class="form-label">Nama Barang <span class="text-danger fw-semibold">*</span></label>
+                    <input type="text" class="form-control" id="namaBarang" name="namaBarang" maxlength="45" />
+                </div>
+
+                <div class="col-md-6 col-12">
+                    <label for="hargaBarang" class="form-label">Harga Barang <span class="text-danger fw-semibold">*</span></label>
+                    <input type="text" class="form-control" id="hargaBarang" name="hargaBarang" />
+                </div>
+                <div class="col-md-6 col-12">
+                    <label for="jumlahBarang" class="form-label">Jumlah Barang <span class="text-danger fw-semibold">*</span></label>
+                    <input type="number" class="form-control" id="jumlahBarang" name="jumlahBarang" min="1" max="1000" />
+                </div>
+
+                <div class="col-12">
+                    <label for="valas" class="form-label">Valuta Asing</label>
+                    <select class="form-select" id="valas" name="valas" disabled>
+                        <option value="">-- Pilih Valas --</option>
+                        <option value="14917">-- USD --</option>
+                        <option value="10590">-- SGD --</option>
+                        <option value="14918">-- EUR --</option>
+                    </select>
+                </div>
+            </form>
+
+            <div class="mt-5" id="hasil"></div>
+        </div>
+        
+        <!-- bootstrap js -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
+        </script>
+
+        <!-- main js -->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
